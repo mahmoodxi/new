@@ -19,8 +19,7 @@ def main():
   tls = request.args.get('tls')
   thread = request.args.get('thread')
   port = request.args.get('port')
-  get = requests.get("https://icanhazip.com/")
-  ip = str(get.text)
+  ip = request.args.get('ip')
   ipfinish = ip.replace("\n","")
 
   os.system("rm -rf /etc/systemd/system/mtp.service")
@@ -51,8 +50,7 @@ def main2():
   tls = request.args.get('tls')
   thread = request.args.get('thread')
   port = request.args.get('port')
-  get = requests.get("https://icanhazip.com/")
-  ip = str(get.text)
+  ip = request.args.get('ip')
   ipfinish = ip.replace("\n","")
 
   os.system("rm -rf /etc/systemd/system/mtp.service")
